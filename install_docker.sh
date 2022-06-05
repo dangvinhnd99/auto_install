@@ -1,6 +1,5 @@
-#!/bin/sh
-sudo apt-get update -y
-sudo swapoff -a
-sudo hostnamectl set-hostname "master"
-sudo apt-get install docker.io -y
-sudo usermod -aG docker ubuntu
+#!/bin/bash
+sudo yum update -y
+sudo yum install -y docker
+sudo service docker start
+sudo usermod -a -G docker ec2-user
